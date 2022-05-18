@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: fronted
+  labels:
+    app: rs-test
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: frontend
+    template:
+      metadata:
+        labels:
+          app: frontend
+      spec:
+        containers:
+        - name: cont1
+          image: nginx:alpine
+
+
+
+
+          
