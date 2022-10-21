@@ -61,14 +61,14 @@ spec:
 	selector:
 		matchLabels:
 			app: frontend
-		template:
-			metadata:
-				labels:
-					app: frontend
-			spec:
-				containers:
-				- name: cont1
-				image: nginx:alpine
+	template:
+		metadata:
+			labels:
+				app: frontend
+		spec:
+			containers:
+			- name: cont1
+			image: nginx:alpine
 ```
 
 Comando para ejecutar el archivo:
